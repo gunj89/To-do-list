@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styl.css">
     
 </head>
 <body>
@@ -19,28 +19,12 @@
         </ul>
     </div>
     </div>
-
+    <script src="script.js"></script>
     <script>
-        const inputBox = document.getElementById("inputField");
-        const listContainer = document.getElementById("listContainer");
-        function addTask() {
-            if(inputBox.value === ''){
-                alert("You have to add a task");
-            }
-            else{
-                let li = document.createElement("li");
-                li.innerHTML = inputBox.value;
-                listContainer.appendChild(li);  
-                const dltBtn = document.createElement("button");
-                dltBtn.innerHTML = "❌";
-                li.appendChild(dltBtn); 
-                inputBox.value = "" //empty the field after one task added.
-                dltBtn.onclick = function(){
-                    li.remove();
-                }
-            }
-        }
+        
+        
         
     </script>
+    <script src="storage.js"></script>
 </body>
 </html>
