@@ -1,21 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background: linear-gradient(to left, rgb(91, 51, 159), rgb(54, 42, 84));
+    min-height: 100vh;
+
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+
+    padding: 40px 15px;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
 }
+
+
+/* =========================
+   MAIN TODO BOX
+========================= */
 
 .calculatorBox {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    background-color: white;
-    padding: 10px;
-    margin: 5%;
+    width: 450px;
+    max-width: 100%;
+
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
-.list {
-    flex-basis: 100%;
+
+/* =========================
+   INPUT AREA
+========================= */
+
+.inputadd {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+    margin-bottom: 25px;
+}
+
+#inputField {
+    flex: 1;
+    min-width: 0;
+
+    padding: 12px 15px;
+
+    border: 2px solid #ddd;
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+#inputField:focus {
+    border-color: #667eea;
+}
+
+
+/* =========================
+   ADD BUTTON
+========================= */
+
+#addBtn {
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #667eea;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#addBtn:hover {
+    background: #5568d9;
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   TODO LIST
+========================= */
+
+#listContainer {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Individual task */
+
+#listContainer li {
+    display: flex;
+    align-items: center;
+
+    min-height: 50px;
+
+    padding: 12px 15px;
+    margin-bottom: 10px;
+
+    background: #f4f4f4;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    word-break: break-word;
+
+    transition: 0.2s;
+}
+
+#listContainer li:hover {
+    background: #e8e8e8;
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   CHECKBOX
+========================= */
+
+#listContainer li input[type="checkbox"] {
+    width: 19px;
+    height: 19px;
+
+    margin-left: auto;
+
+    flex-shrink: 0;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   DELETE BUTTON
+========================= */
+
+#listContainer li button {
+    margin-left: 12px;
+
+    padding: 3px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    transition: 0.2s;
+}
+
+#listContainer li button:hover {
+    transform: scale(1.2);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    .calculatorBox {
+        width: 100%;
+
+        padding: 20px;
+
+        border-radius: 12px;
+    }
+
+    .inputadd {
+        gap: 7px;
+        margin-bottom: 20px;
+    }
+
+    #inputField {
+        font-size: 15px;
+        padding: 11px 12px;
+    }
+
+    #addBtn {
+        padding: 11px 15px;
+        font-size: 15px;
+    }
+
+    #listContainer li {
+        font-size: 15px;
+        padding: 11px 12px;
+    }
 }
