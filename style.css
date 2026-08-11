@@ -1,0 +1,21 @@
+body {
+    background: linear-gradient(to left, rgb(91, 51, 159), rgb(54, 42, 84));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculatorBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    background-color: white;
+    padding: 10px;
+    margin: 5%;
+}
+
+.list {
+    flex-basis: 100%;
+}
