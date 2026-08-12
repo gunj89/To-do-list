@@ -23,7 +23,7 @@ function addTask() {
             saveData();
         }
         const dltBtn = document.createElement("button");
-        dltBtn.innerHTML = "❌";
+        dltBtn.innerHTML = '<img src="src/close.png" alt="x" style="width:15px; height:15px;">';
         li.appendChild(dltBtn);
         inputBox.value = "" //empty the field after one task added.
         saveData();
